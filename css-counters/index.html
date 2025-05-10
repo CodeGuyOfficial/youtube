@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Counters</title>
+</head>
+<style>
+  ul {
+    list-style-type: none;
+    counter-reset: section;
+  }
+  li::before {
+    counter-increment: section;
+    content: counters(section, ".") " ";
+  }
+</style>
+<body>
+  <ul>
+    <li>item</li>
+    <li>item
+      <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item
+          <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+          </ul>
+        </li>
+        <li>item</li>
+      </ul>
+    </li>
+    <li>item</li>
+    <li>item</li>
+  </ul>
+</body>
+</html>
