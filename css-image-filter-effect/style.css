@@ -1,0 +1,91 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #f0f4ff, #ffffff);
+  color: #333;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1300px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Filter Card with Glass Effect */
+.filter-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.filter-card img {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.filter-card p {
+  padding: 1rem;
+  background: #ffffffcc;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+/* Filters */
+.blur img       { filter: blur(4px); }
+.brightness img { filter: brightness(140%); }
+.contrast img   { filter: contrast(180%); }
+.grayscale img  { filter: grayscale(100%); }
+.invert img     { filter: invert(100%); }
+.opacity img    { filter: opacity(60%); }
+.saturate img   { filter: saturate(300%); }
+.sepia img      { filter: sepia(100%); }
+.hue img        { filter: hue-rotate(120deg); }
+.shadow img     { filter: drop-shadow(6px 6px 12px rgba(0,0,0,0.5)); }
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: #888;
+}
